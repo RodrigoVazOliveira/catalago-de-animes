@@ -13,4 +13,7 @@ export class CategoryService {
   getCategories():Observable<any> {
     return this.http.get(this.URL_BASE);
   }
+
+
+
 }
