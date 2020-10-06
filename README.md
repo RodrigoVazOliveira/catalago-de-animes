@@ -34,7 +34,10 @@ documentação: [https://kitsu.docs.apiary.io/](https://kitsu.docs.apiary.io/)
 1. no diretório view possui os componentes de visualização com seus estilos.
 2. no diretório services possui seus serviços para requisições http.
 3. na raiz a estrutura principal do angular
-.
+
+
+
+```
 ├── app.component.html
 ├── app.component.scss
 ├── app.component.spec.ts
