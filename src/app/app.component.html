@@ -1,26 +1,35 @@
 <header>
   <h1 class="center-title">Catálago de animes</h1>
+  <button accesskey="w" (click)="modifyColorHighConstrast()" mat-button title="Alto constrate">
+    Alto constrate (Alt + w)
+  </button>
+  <button  mat-button title="Aumentar o tamanho da letra">
+    A+
+  </button>
+  <button mat-button title="Diminuir o tamanho da letra">
+    A-
+  </button>
 </header>
 <nav>
   <ul>
     <li>
-      <a routerLink="" routerLinkActive="" title="Página ínicial">
-        Página ìnicial
+      <a routerLink="" accesskey="h" routerLinkActive="" title="Página ínicial">
+        Página ìnicial (Alt + h)
       </a>
     </li>
     <li>
-      <a routerLink="/list" routerLinkActive="/list" title="Lista de animes">
-        Lista de animes
+      <a routerLink="/list" accesskey="l" routerLinkActive="/list" title="Lista de animes">
+        Lista de animes (Alt + l)
       </a>
     </li>
     <li>
-      <a routerLink="/category" routerLinkActive="/category" title="Categoria de animes">
-        Categorias de animes
+      <a routerLink="/category" accesskey="c" routerLinkActive="/category" title="Categoria de animes">
+        Categorias de animes (Alt + c)
       </a>
     </li>
     <li>
-      <a routerLink="/about" routerLinkActive="/about" title="Sobre o site e criador">
-        Sobre
+      <a routerLink="/about" accesskey="a" routerLinkActive="/about" title="Sobre o site e criador">
+        Sobre (Alt + a)
       </a>
     </li>
   </ul>

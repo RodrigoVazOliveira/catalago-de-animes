@@ -8,7 +8,7 @@ Para isso, a aplicação vai consumir a API da Kitsu.
 
 URL: [https://kitsu.io/api/edge](https://kitsu.io/api/edge)
 
-documentação: [https://www.markdownguide.org/basic-syntax/](https://www.markdownguide.org/basic-syntax/)
+documentação: [https://kitsu.docs.apiary.io/](https://kitsu.docs.apiary.io/)
 
 ---
 
