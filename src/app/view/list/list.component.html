@@ -1,1 +1,29 @@
-<p>list works!</p>
+<mat-grid-list cols="2" rowHeight="2:6">
+  <mat-grid-tile *ngFor="let anime of this.data">
+    <mat-card class="example-card" >
+      <mat-card-header>
+        <mat-card-title class="text-center"> {{ anime.attributes.canonicalTitle }} | {{ anime.attributes.titles.ja_jp }}</mat-card-title>
+        <mat-card-subtitle>
+          {{ anime.attributes.startDate }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <img title="poster do anime  {{ anime.attributes.canonicalTitle }} " mat-card-image src="{{ anime.attributes.posterImage.medium }}" alt="poster da anime {{ anime.attributes.canonicalTitle }}">
+      <mat-card-content class="text-content">
+        <p >
+          {{ anime.attributes.synopsis | slice:0:80 }}
+        </p>
+        <hr>
+        <p>
+          <a href="{{ anime.links.self }}">
+            {{ anime.attributes.titles.en }}
+          </a>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+

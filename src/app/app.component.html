@@ -1,16 +1,35 @@
 <header>
-  <h1>Catálago de animes</h1>
+  <h1 class="center-title">Catálago de animes</h1>
 </header>
 <nav>
-  <!-- main Navigatoin -->
+  <ul>
+    <li>
+      <a routerLink="" routerLinkActive="" title="Página ínicial">
+        Página ìnicial
+      </a>
+    </li>
+    <li>
+      <a routerLink="/list" routerLinkActive="/list" title="Lista de animes">
+        Lista de animes
+      </a>
+    </li>
+    <li>
+      <a routerLink="/category" routerLinkActive="/category" title="Categoria de animes">
+        Categorias de animes
+      </a>
+    </li>
+    <li>
+      <a routerLink="/about" routerLinkActive="/about" title="Sobre o site e criador">
+        Sobre
+      </a>
+    </li>
+  </ul>
 </nav>
 <main>
-  <aside>
 
-  </aside>
   <router-outlet></router-outlet>
 </main>
 <footer>
-
+  <p>Desenvolvido por <strong>Rodrigo Vaz</strong>, site: <a href="https://rodrigovaz.dev/" title="site do rodrigo vaz" target="_blank">rodrigovaz.dev</a>
+  | <a title="e-mail de rodrigo vaz" href="mailto:rodrigovazdeoliveira@gmail.com">rodrigovazdeoliveira@gmail.com</a></p>
 </footer>
-

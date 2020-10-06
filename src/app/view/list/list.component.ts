@@ -1,3 +1,4 @@
+import { ListService } from './../../services/list.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  data;
+
+  constructor(private service: ListService) { }
 
   ngOnInit(): void {
+    this.service.getAnimesList().subscribe(response => {
+      this.data = response.data;
+      console.log(this.data);
+    }, err => {
+      this.data = err;
+    });
   }
 
 }
