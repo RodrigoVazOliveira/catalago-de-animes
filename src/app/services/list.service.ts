@@ -11,7 +11,7 @@ export class ListService {
 
   constructor(private http: HttpClient) {}
 
-  getAnimesList():Observable<any> {
+  public getAnimesList():Observable<any> {
     return this.http.get(this.URL_BASE);
   }
 
