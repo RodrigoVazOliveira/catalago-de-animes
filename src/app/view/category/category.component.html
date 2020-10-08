@@ -1,6 +1,6 @@
 <ul class="categoria-list">
-  <li *ngFor="let category of this.data">
-    <a routerLink="/categories/{{ category.id }}" routerLinkActive="/categories/{{ category.id }}" title="categoria {{ category.attributes.title }}">
+  <li *ngFor="let category of data">
+    <a [routerLink]="['/categories', category.id]" routerLinkActive="active" title="categoria {{ category.attributes.title }}">
       {{ category.attributes.title }}
     </a>
   </li>

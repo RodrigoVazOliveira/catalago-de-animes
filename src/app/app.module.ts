@@ -16,6 +16,11 @@ import {MatListModule} from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { SearchComponent } from './view/search/search.component';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { AnimeComponent } from './view/anime/anime.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HomeComponent,
     AboutComponent,
     ListComponent,
-    CategoryComponent
+    CategoryComponent,
+    SearchComponent,
+    AnimeComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,8 +43,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatListModule,
     HttpClientModule,
     MatCardModule,
-    MatGridListModule
-
+    MatGridListModule,
+    MatInputModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

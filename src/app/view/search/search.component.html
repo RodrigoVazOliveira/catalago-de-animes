@@ -1,0 +1,33 @@
+<mat-form-field class="example-full-width">
+  <input (keyup.enter)="search()" title="campo de busca de animes, após digitar pressione enter"
+   [(ngModel)]="searchWord" accesskey="b" matInput placeholder="Digite o nome do anime e pressione enter para buscar e ALT + B para focar no campo..." value="">
+</mat-form-field>
+<button (click)="search()" class="example-full-width" title="botão para buscar ( alt + enter)" accesskey="enter" mat-button>Buscar <kbd>ALT + ENTER</kbd></button>
+
+<div *ngIf="searchData != false || searchData.length != 0">
+  <mat-card class="example-card" *ngFor="let anime of searchData">
+        <mat-card-header>
+          <mat-card-title class="text-center"> {{ anime.attributes.canonicalTitle }} | {{ anime.attributes.titles.ja_jp }}</mat-card-title>
+          <mat-card-subtitle>
+            {{ anime.attributes.startDate }}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img title="poster do anime  {{ anime.attributes.canonicalTitle }} " mat-card-image src="{{ anime.attributes.posterImage.large }}" alt="poster da anime {{ anime.attributes.canonicalTitle }}">
+        <mat-card-content class="text-content">
+          <p >
+            {{ anime.attributes.synopsis | slice:0:80 }}
+          </p>
+          <hr>
+          <p>
+            <a href="{{ anime.links.self }}">
+              {{ anime.attributes.titles.en }}
+            </a>
+          </p>
+        </mat-card-content>
+      </mat-card>
+</div>
+<div *ngIf="searchData == false || searchData.length == 0">
+  <p>
+    nenhum anime encontrado com esse {{ searchWord }}.
+  </p>
+</div>

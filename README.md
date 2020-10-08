@@ -18,8 +18,9 @@ documentação: [https://kitsu.docs.apiary.io/](https://kitsu.docs.apiary.io/)
 |------|---------------------|------------------------------------|
 | /    | Página incial       | Página inicial contendo, menus e menus de acessbilidade|
 | /list | Página contento uma tabela com os animes | Uma tabela listando 20 animes por página |
-| /category | página de categorias de animes | página que listas categorias |
+| /category | página de categorias de animes | página que listas categorias e ao clicar em categoria será listados alguns dos animes nessa categoria |
 | /about | página de sobre o aplicativo | mostrnado a página no github, e quem criou e contato para sugestões. |
+| /categories/:id | página os animes nessa categoria | mostrará os cards completos dos animes
 
 
 ##### Recursos da aplicação
@@ -45,28 +46,40 @@ documentação: [https://kitsu.docs.apiary.io/](https://kitsu.docs.apiary.io/)
 ├── app.module.ts
 ├── app-routing.module.ts
 ├── services
-│   ├── category.service.spec.ts
-│   ├── category.service.ts
-│   ├── list.service.spec.ts
-│   └── list.service.ts
+│   ├── category.service.spec.ts
+│   ├── category.service.ts
+│   ├── list.service.spec.ts
+│   ├── list.service.ts
+│   ├── search.service.spec.ts
+│   └── search.service.ts
 └── view
     ├── about
-    │   ├── about.component.html
-    │   ├── about.component.scss
-    │   ├── about.component.spec.ts
-    │   └── about.component.ts
+    │   ├── about.component.html
+    │   ├── about.component.scss
+    │   ├── about.component.spec.ts
+    │   └── about.component.ts
+    ├── anime
+    │   ├── anime.component.html
+    │   ├── anime.component.scss
+    │   ├── anime.component.spec.ts
+    │   └── anime.component.ts
     ├── category
-    │   ├── category.component.html
-    │   ├── category.component.scss
-    │   ├── category.component.spec.ts
-    │   └── category.component.ts
+    │   ├── category.component.html
+    │   ├── category.component.scss
+    │   ├── category.component.spec.ts
+    │   └── category.component.ts
     ├── home
-    │   ├── home.component.html
-    │   ├── home.component.scss
-    │   ├── home.component.spec.ts
-    │   └── home.component.ts
-    └── list
-        ├── list.component.html
-        ├── list.component.scss
-        ├── list.component.spec.ts
-        └── list.component.ts
+    │   ├── home.component.html
+    │   ├── home.component.scss
+    │   ├── home.component.spec.ts
+    │   └── home.component.ts
+    ├── list
+    │   ├── list.component.html
+    │   ├── list.component.scss
+    │   ├── list.component.spec.ts
+    │   └── list.component.ts
+    └── search
+        ├── search.component.html
+        ├── search.component.scss
+        ├── search.component.spec.ts
+        └── search.component.ts

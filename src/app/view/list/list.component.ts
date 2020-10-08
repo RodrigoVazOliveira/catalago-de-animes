@@ -15,7 +15,6 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.service.getAnimesList().subscribe(response => {
       this.data = response.data;
-      console.log(this.data);
     }, err => {
       this.data = err;
     });
