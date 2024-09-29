@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class SearchService {
 
-  URL_BASE:string = 'https://kitsu.io/api/edge//anime?filter[text]=';
+  URL_BASE:string = 'https://kitsu.io/api/edge/anime?filter[text]=';
 
   constructor(private http: HttpClient) { }
 
